@@ -1,0 +1,14 @@
+
+version: '3'
+name: 'spark-learning'
+
+services:
+  spark:
+    container_name: spark
+    image: jupyter/pyspark-notebook:latest
+    volumes:
+      - ./notebooks:/home/jovyan/notebooks
+      - ./data:/home/jovyan/data
+    ports:
+      - 4040:4040
+      - 8888:8888
